@@ -1,3 +1,19 @@
 This example correspond to the simplest 2D diffusion problem: a rectangular system with a fixed constant concentration on top and zero concentration (adsorbing boundary) at the bottom.
-Initially hte fluid is empty of solute.
-We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer (.dat) do not correspond to theory
+Initially the fluid is empty of solute.
+
+We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer (.dat) do not correspond to theory.
+
+BRIEF DICUSSION OF PROBLEMS:
+
+1) Incorrect total mass
+The fixed top 2D concentration is 0.1kg/m2 and at bottom we have an adsorbing boundary with fixed 0 concentration. The separation between them is 1 cm.
+In the steady state theory predicts a linear profiel with an average concentration of 0.05kg/m2 and total mass (integrating the profile) of 2.5e-8kg
+This value is two orders of magntgidue smaller than the value given by ELMER (see .dat file)
+
+2) Incorrect diffusive flux
+Using fick's law and the diffusion coefficient used in the .sif we get a flux of 5e-11kg/s in the steady state which differs to the value given by ELMER 
+(see .dat file).
+
+3) Convective flux 0
+There is no convection and velocity is fixed to 0 (NS equations are not solved and convection not considered)
+ELMER gives in the .dat file a convective flux of 4 orders of magntiude larger than the diffusive flux
