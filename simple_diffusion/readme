@@ -7,7 +7,8 @@ Fluxes and mass calculated by ELMER are stires in the .dat file (see the .dat.na
 BRIEF DICUSSION OF PROBLEMS:
 
 1) Incorrect total mass
-The fixed top 2D concentration is 0.1kg/m2 and at bottom we have an adsorbing boundary with fixed 0 concentration. The separation between them is 1 cm.
+The fixed top 2D concentration is 0.1kg/m2 and at bottom we have an adsorbing boundary with fixed 0 concentration. 
+The separation between them is 1 cm (each boundary has 0.5 cm length).
 In the steady state theory predicts a linear profile with an average concentration of 0.05kg/m2 and total mass (integrating the profile) of 2.5e-8kg
 This value is two orders of magntgidue smaller than the value given by ELMER (see .dat file)
 
@@ -17,4 +18,4 @@ Using fick's law and the diffusion coefficient used in the .sif we get a flux of
 
 3) Convective flux 0
 There is no convection and velocity is fixed to 0 (NS equations are not solved and convection not considered)
-ELMER gives in the .dat file a convective flux of 4 orders of magntiude larger than the diffusive flux
+ELMER gives in the .dat file a convective flux of 4 orders of magnitude larger than the diffusive flux
