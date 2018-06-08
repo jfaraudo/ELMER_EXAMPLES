@@ -7,7 +7,7 @@ BRIEF DICUSSION OF PROBLEMS:
 
 1) Incorrect total mass
 The fixed top 2D concentration is 0.1kg/m2 and at bottom we have an adsorbing boundary with fixed 0 concentration. The separation between them is 1 cm.
-In the steady state theory predicts a linear profiel with an average concentration of 0.05kg/m2 and total mass (integrating the profile) of 2.5e-8kg
+In the steady state theory predicts a linear profile with an average concentration of 0.05kg/m2 and total mass (integrating the profile) of 2.5e-8kg
 This value is two orders of magntgidue smaller than the value given by ELMER (see .dat file)
 
 2) Incorrect diffusive flux
