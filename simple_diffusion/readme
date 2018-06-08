@@ -1,0 +1,3 @@
+This example correspond to the simplest 2D diffusion problem: a rectangular system with a fixed constant concentration on top and zero concentration (adsorbing boundary) at the bottom.
+Initially hte fluid is empty of solute.
+We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer (.dat) do not correspond to theory
