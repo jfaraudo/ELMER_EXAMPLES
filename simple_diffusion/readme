@@ -1,7 +1,8 @@
 This example correspond to the simplest 2D diffusion problem: a rectangular system with a fixed constant concentration on top and zero concentration (adsorbing boundary) at the bottom.
 Initially the fluid is empty of solute.
 
-We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer (.dat) do not correspond to theory.
+We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer do not correspond to theory.
+Fluxes and mass calculated by ELMER are stires in the .dat file (see the .dat.names file for details of calculation of each column in .dat)
 
 BRIEF DICUSSION OF PROBLEMS:
 
