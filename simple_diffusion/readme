@@ -12,20 +12,19 @@ EXPECTED STEADY STATE ACCORDING TO THEORY
 
 The steady state corresponds to a linear concentration profile, with a concentration of 0.1 Kg/m3 on top (y=0.5 cm), 
 0.05 Kg/m3 in the middle of the system  (y=0.25 cm) and 0 Kg/m3 at the bottom (y=0) and the average concentration is 0.05 Kg/m3.
-The total mass inside the system is simply 0.05 Kg/m3 x 5e-5 m3 = 25e-7 Kg = 2.5 e-6 Kg
+The total mass inside the system is simply 0.05 Kg/m3 x 5e-5 m3 = 25e-7 Kg = 2.5 e-6 Kg, as correctly predicted by Elmer (see .dat file)
 
 The flux has to be constant and equal accross both surfaces (and accross the system) and can be calculated from Ficks' law as:
 
 
 
+
 BRIEF DICUSSION OF PROBLEMS:
 
-1) correct total mass (see the value given by ELMER in .dat file)
-
-2) Incorrect diffusive flux
+1) Incorrect diffusive flux
 Using fick's law and the diffusion coefficient used in the .sif we get a flux of 5e-11kg/s in the steady state which differs to the value given by ELMER 
 (see .dat file).
 
-3) Convective flux 0
+2) Convective flux 0
 There is no convection and velocity is fixed to 0 (NS equations are not solved and convection not considered)
 ELMER gives in the .dat file a convective flux of 4 orders of magnitude larger than the diffusive flux
