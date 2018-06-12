@@ -19,13 +19,11 @@ The mass diffusive flow has to be constant and equal across both surfaces (and a
 
 1e-9 m2/s x (0.1 Kg/m3 / 5e-3 m) x (5e-3 m x 1 m) = 1e-10 Kg/s 
 
-
-
 BRIEF DICUSSION OF PROBLEMS:
 
 1) Incorrect diffusive flux
-Using fick's law and the diffusion coefficient used in the .sif we get a flux of 5e-11kg/s in the steady state which differs to the value given by ELMER 
-(see .dat file).
+The value given by Elmer (see columns 3 and 4 of .dat file) is approx. half of that predicted by Fick's law.
+Also, the fluxes at both surfaces are not strictly equal as it should be in the steady state, there is a small difference.
 
 2) Convective flux 0
 There is no convection and velocity is fixed to 0 (NS equations are not solved and convection not considered)
