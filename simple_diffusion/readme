@@ -1,22 +1,26 @@
 This example correspond to the simplest 2D diffusion problem: a rectangular system with a fixed constant concentration on top (0.1kg/m3)
 and zero concentration (adsorbing boundary) at the bottom.
-The separation between the surfaces is 1 cm. Each boundary has 0.5 cm length and Elmer assumes that the (implicit) third dimension is 1 m.
+The separation between the surfaces is 1 cm. Each boundary has 0.5 cm length and Elmer assumes that the (implicit) third dimension is 1 m,
+so the volume of the system is 0.01 x 0.005 x 1 = 5e-5 m3
 Initially the fluid is empty of solute.
 The diffusion coefficient of the solute is 1e-9 m2/s
 
 We observe (correctly) the formation of a concentration gradient but the fluxes calculated by ELmer do not correspond to theory.
 Fluxes and mass calculated by ELMER are stored in the .dat file (see the .dat.names file for details of calculation of each column in .dat)
 
-EXPECTED STEADY STATE
+EXPECTED STEADY STATE ACCORDING TO THEORY
 
 The steady state corresponds to a linear concentration profile, with a concentration of 0.1 Kg/m3 on top (y=0.5 cm), 
-0.05 Kg/m3 in the middle of the system  (y=0.25 cm) and 0 Kg/m3 at the bottom (y=0). 
+0.05 Kg/m3 in the middle of the system  (y=0.25 cm) and 0 Kg/m3 at the bottom (y=0) and the average concentration is 0.05 Kg/m3.
+The total mass inside the system is simply 0.05 Kg/m3 x 5e-5 m3 = 25e-7 Kg = 2.5 e-6 Kg
+
+The flux has to be constant and equal accross both surfaces (and accross the system) and can be calculated from Ficks' law as:
+
+
 
 BRIEF DICUSSION OF PROBLEMS:
 
-1) Incorrect total mass
-In the steady state theory predicts a linear profile with an average concentration of 0.05kg/m2 and total mass (integrating the profile) of 2.5e-8kg
-This value is two orders of magnitude smaller than the value given by ELMER (see .dat file)
+1) correct total mass (see the value given by ELMER in .dat file)
 
 2) Incorrect diffusive flux
 Using fick's law and the diffusion coefficient used in the .sif we get a flux of 5e-11kg/s in the steady state which differs to the value given by ELMER 
