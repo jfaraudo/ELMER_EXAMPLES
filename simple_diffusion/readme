@@ -12,10 +12,12 @@ EXPECTED STEADY STATE ACCORDING TO THEORY
 
 The steady state corresponds to a linear concentration profile, with a concentration of 0.1 Kg/m3 on top (y=0.5 cm), 
 0.05 Kg/m3 in the middle of the system  (y=0.25 cm) and 0 Kg/m3 at the bottom (y=0) and the average concentration is 0.05 Kg/m3.
+
 The total mass inside the system is simply 0.05 Kg/m3 x 5e-5 m3 = 25e-7 Kg = 2.5 e-6 Kg, as correctly predicted by Elmer (see .dat file)
 
-The flux has to be constant and equal accross both surfaces (and accross the system) and can be calculated from Ficks' law as:
+The mass diffusive flow has to be constant and equal across both surfaces (and across the system) and can be calculated from Ficks' law as:
 
+1e-9 m2/s x (0.1 Kg/m3 / 5e-3 m) x (5e-3 m x 1 m) = 1e-10 Kg/s 
 
 
 
